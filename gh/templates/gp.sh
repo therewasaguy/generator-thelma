@@ -20,6 +20,7 @@ git rm -rf -q .
 
 # use bower to install runtime deployment
 bower cache clean $repo # ensure we're getting the latest from master.
+bower install --save Polymer/core-component-page#0.5.5
 bower install --config.directory="components" $org/$repo#master
 
 # redirect by default to the component folder

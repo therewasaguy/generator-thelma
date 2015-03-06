@@ -38,6 +38,9 @@ module.exports = yeoman.generators.Base.extend({
     var src = path.join(__dirname, 'templates');
     var dest = path.join(process.cwd(), 'tmp-' + Date.now());
 
+    // add proper index.html template
+    this.template('_index.html', 'index.html');
+
     // work around weird timing issues with this.copy...
     ncp(src, dest, function (err) {
       if (err) {
